@@ -1,6 +1,6 @@
 
 
-	class MyClass < ActiveRecord::Base
+	class MyClass
 		attr_accessor :name
 
 		def initialize(name="world")
