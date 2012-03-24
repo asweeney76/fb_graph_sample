@@ -8,9 +8,9 @@ FbGraphSample::Application.routes.draw do
   resource :facebook, :except => :create do
     get :callback, :to => :create
   end
-  resource :dashboard, :only => :show
+  resource :dashboard, :only => :show, :controller => :dashboard
   resource :profile, :only => :show
-  resource :timeline, :only => [:show, :create]
+  resource :timeline, :only => [:show, :create], :controller => :timeline
   resources :subscriptions, :only => [:index, :show, :create]
   post 'subscriptions/:id', :to => 'subscriptions#update'
 
